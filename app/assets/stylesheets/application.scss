@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,800|Roboto:300,400,400i,700&display=swap');
+
+@import "utilities-css";
+@import "pages";
+
+$light_color: #ffffff;
+$light_dark: #f1f5f8;
+$dark_color: #213352;
+$primary_color: #63a79c;
+$primary_light: #b4d5cf;
+$danger_color: #DD1C1A;
+$caution_color: #fff212;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// General Styling
+html,
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  background-color: #fff;
+  color: #333;
+}
+
+header {
+  height: 100vh;
+  background-image: url(asset_path('header_bg.jpg'));
+  background-size: cover;
+  background-position: center;
+}
+
+// NAVIGATION
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 8vh;
+
+  // background: rgba($dark_color, .5);
+  #logo {
+    color: $light_color;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 800;
+  }
+
+  .nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+
+    li {
+      list-style: none;
+
+      a {
+        color: $light_color;
+        text-decoration: none;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 400;
+        // letter-spacing: 3px;
+      }
+    }
+  }
+
+  .burger div {
+    width: 1.8rem;
+    height: 3px;
+    margin: 0.2rem;
+    background: $light_color;
+
+    & {
+      display: none;
+      cursor: pointer;
+    }
+  }
+}
+
+// Media Query
+@media screen and (max-width:1024px) {
+  nav {
+    .nav-links {
+      width: 60%;
+    }
+
+  }
+}
+
+@media screen and (max-width:768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .nav-links {
+    position: absolute;
+    height: 92vh;
+    top: 8vh;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba($dark_color, .67);
+    width: 50%;
+    transform: translateX(100%);
+    transition: 0.5 ease-in;
+  }
+
+  .nav-links li {
+    opacity: 0;
+  }
+
+  .burger {
+    display: block;
+  }
+}
+
+.nav-active {
+  transform: translateX(0);
+}

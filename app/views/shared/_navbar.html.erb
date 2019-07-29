@@ -1,0 +1,33 @@
+<header>
+  <nav>
+    <div id="logo">
+      <h1>imurhost</h1>
+    </div>
+    <ul class="nav-links">
+    <%if(user_signed_in?)%>
+      <li><a href="">Host a home</a></li>
+      <li><a href="">Host an experience</a></li>
+    <% else %>
+      <li><a href="">Help</a></li>
+      <li><a href="">sign Up</a></li>
+      <li><a href="">log in</a></li>
+    <% end %>
+    </ul>
+    <div class="burger">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
+  </nav>
+</header>
+<!-- <header>
+  <img src="" alt="logo" class="logo">
+  <nav>
+    <ul>
+      <li><a href="">Host</a></li>
+      <li><a href="">Travel</a></li>
+      <li><a href="">Sign Up</a></li>
+      <li><a href="">Log in</a></li>
+    </ul>
+  </nav>
+</header> -->

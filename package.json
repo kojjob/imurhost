@@ -1,0 +1,11 @@
+{
+  "name": "imurhost",
+  "private": true,
+  "dependencies": {
+    "@rails/webpacker": "^4.0.7",
+    "tailwindcss": "^1.0.5"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "^3.7.2"
+  }
+}
